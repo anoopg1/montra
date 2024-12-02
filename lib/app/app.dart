@@ -1,0 +1,72 @@
+import 'package:montra/ui/pages/account_edit/account_edit_view.dart';
+import 'package:montra/ui/pages/account_setup/account_setup_view.dart';
+import 'package:montra/ui/pages/accounts/accounts_view.dart';
+import 'package:montra/ui/pages/accounts_detail/accounts_detail_view.dart';
+import 'package:montra/ui/pages/add_account/add_account_view.dart';
+import 'package:montra/ui/pages/add_expense/add_expense_view.dart';
+import 'package:montra/ui/pages/add_income/add_income_view.dart';
+import 'package:montra/ui/pages/budget/budget_view.dart';
+import 'package:montra/ui/pages/budget_detail/budget_detail_view.dart';
+import 'package:montra/ui/pages/currency/currency_view.dart';
+import 'package:montra/ui/pages/export_confirmation/export_confirmation_view.dart';
+import 'package:montra/ui/pages/export_data/export_data_view.dart';
+import 'package:montra/ui/pages/financial_report/financial_report_view.dart';
+import 'package:montra/ui/pages/forget_password/forget_password_view.dart';
+import 'package:montra/ui/pages/home/home_view.dart';
+import 'package:montra/ui/pages/language/language_view.dart';
+import 'package:montra/ui/pages/login/login_view.dart';
+import 'package:montra/ui/pages/notification_setting/notification_setting_view.dart';
+import 'package:montra/ui/pages/notifications/notifications_view.dart';
+import 'package:montra/ui/pages/onboarding/onboarding_view.dart';
+import 'package:montra/ui/pages/password_recovery.dart/password_recovery_view.dart';
+import 'package:montra/ui/pages/profile/profile_view.dart';
+import 'package:montra/ui/pages/reset_password/reset_password_view.dart';
+import 'package:montra/ui/pages/security/security_view.dart';
+import 'package:montra/ui/pages/settings/settings_view.dart';
+import 'package:montra/ui/pages/setup_pin/setup_pin_view.dart';
+import 'package:montra/ui/pages/signup/signup_view.dart';
+import 'package:montra/ui/pages/signup_verification/signup_verification_view.dart';
+import 'package:montra/ui/pages/splash/splash_view.dart';
+import 'package:montra/ui/pages/success_page/success_view.dart';
+import 'package:montra/ui/pages/theme/theme_view.dart';
+import 'package:montra/ui/pages/transactions/transactions_view.dart';
+import 'package:stacked/stacked_annotations.dart';
+import 'package:stacked_services/stacked_services.dart';
+
+@StackedApp(routes: [
+  MaterialRoute(page: SplashView),
+  MaterialRoute(page: OnboardingView),
+  MaterialRoute(page: SignupView),
+  MaterialRoute(page: SignupVerificationView),
+  MaterialRoute(page: LoginView),
+  MaterialRoute(page: ForgetPasswordView),
+  MaterialRoute(page: PasswordRecoveryView),
+  MaterialRoute(page: ResetPasswordView),
+  MaterialRoute(page: SetupPinView),
+  MaterialRoute(page: AccountSetupView),
+  MaterialRoute(page: AddAccountView),
+  MaterialRoute(page: SuccessView),
+  MaterialRoute(page: HomeView),
+  MaterialRoute(page: AddExpenseView),
+  MaterialRoute(page: AddIncomeView),
+  MaterialRoute(page: NotificationsView),
+  MaterialRoute(page: TransactionsView),
+  MaterialRoute(page: FinancialReportView),
+  MaterialRoute(page: BudgetView),
+  MaterialRoute(page: BudgetDetailView),
+  MaterialRoute(page: ProfileView),
+  MaterialRoute(page: AccountsView),
+  MaterialRoute(page: AccountsDetailView),
+  MaterialRoute(page: AccountEditView),
+  MaterialRoute(page: SettingsView),
+  MaterialRoute(page: CurrencyView),
+  MaterialRoute(page: LanguageView),
+  MaterialRoute(page: ThemeView),
+  MaterialRoute(page: SecurityView),
+  MaterialRoute(page: NotificationSettingView),
+  MaterialRoute(page: ExportDataView),
+  MaterialRoute(page: ExportConfirmationView),
+], dependencies: [
+  LazySingleton(classType: NavigationService),
+])
+class App {}
